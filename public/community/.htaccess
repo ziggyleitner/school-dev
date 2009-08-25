@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^community.bobsdrumschool.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.community.bobsdrumschool.com$
+RewriteRule ^.*$ "http\:\/\/bobsdrumschool\.com\/insoshi\/" [R=301,L]
+

@@ -1,0 +1,84 @@
+<h1>Listing lessons</h1>
+
+
+
+<% for lesson in @lessons %>
+  <p>
+  <div class="lesson_name">
+    <b>Name:</b>
+    <%=h lesson.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="lesson_header">
+    <b>Header:</b>
+    <%=h lesson.header %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_pretty_name">
+    <b>Pretty Name;</b>
+    <%=h lesson.pretty_name %>
+     </div>
+    </p>
+  <p>
+  <div class="lesson_description">
+    <b>Description:</b>
+    <%=h lesson.description %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_intro_text">
+    <b>Intro Text:</b>
+    <%=h lesson.intro_text %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h lesson.intro_audio_path %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_intro_video">
+    <b>Intro Video:</b>
+    <%=h lesson.intro_video_path %>
+  </p>
+  <p>
+  <div class="lesson_video">
+    <b>Content Video:</b>
+    <%=h lesson.content_video_path %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_audio">
+    <b>Content Audio:</b>
+    <%=h lesson.content_audio_path %>
+     </div>
+  </p>
+  <p>
+  <div class="lesson_footer">
+    <b>Footer:</b>
+    <%=h lesson.footer %>
+     </div>
+  </p>
+  <p>
+      <b>Position:</b>
+      <%=h lesson.position %>
+
+  </p>
+  <p>
+  <div class="lesson_content_text">
+    <b>Content:</b>
+    <%=h lesson.content_text %>
+     </div>
+</p>
+  <p><%= link_to 'Show', lesson %> | <%= link_to 'Edit', edit_lesson_path(lesson) %> |
+  <%= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete %></p>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New lesson', new_lesson_path(@course) %>

@@ -1,0 +1,183 @@
+<h1>Listing Lesson and Beats</h1>
+<p>
+  <b>This is <%=h @lesson.name %></b>
+</p>
+<p>
+<div class="lesson_name">
+    <b>Name:</b>
+    <%=h @lesson.name %>
+ </div>
+  </p>
+  <p>
+  <div class="lesson_header">
+    <b>Header:</b>
+    <%=h @lesson.header %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_pretty_name">
+    <b>Pretty Name;</b>
+    <%=h @lesson.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class="lesson_description">
+    <b>Description:</b>
+    <%=h @lesson.description %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_intro_text">
+    <b>Intro Text:</b>
+    <%=h @lesson.intro_text %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h @lesson.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_intro_video">
+    <b>Intro Video:</b>
+    <%=h @lesson.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_video">
+    <b>Content Video:</b>
+    <%=h @lesson.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_audio">
+    <b>Content Audio:</b>
+    <%=h @lesson.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="lesson_footer">
+    <b>Footer:</b>
+    <%=h @lesson.footer %>
+    </div>
+  </p>
+  
+  <p>
+  <div class="lesson_content_text">
+    <b>Content:</b>
+    <%=h @lesson.content_text %>
+    </div>
+</p>
+<p>
+  <div class="lesson_pdf_One">
+    <%= link_to '<h3>Printable file (pdf) of the first part of this lesson</h3>', @lesson.lesson_pdf_One_path %>
+    </div>
+</p>
+<p>
+  <div class="lesson_pdf_Two">
+    <%= link_to '<h3>Printable file (pdf) of the second part of this lesson</h3>', @lesson.lesson_pdf_Two_path %>
+    </div>
+</p>
+
+
+<h1>Beats</h1>
+<% @lesson.beats.each do |b| %>
+  
+<h2>Showing Beat <%= b.position %> lesson <%= b.lesson_id %> </h2>
+<p>
+  <div class="beat_name">
+    <b>Name:</b>
+    <%=h b.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="beat_header">
+    <b>Header:</b>
+    <%=h b.header %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_pretty_name">
+    <b>Pretty Name:</b>
+    <%=h b.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class = "beat_notation">
+  
+    
+  <%= image_tag(b.not_path, :height => b.not_img_height,  :width => b.not_img_width) %>
+  </div>
+  <div class= "beat_midi">
+    
+    <%= render(:partial => "midi", :object => b)%>
+  </div>
+  </p>
+  <p>
+  <div class="beat_description">
+    <b>Description:</b>
+    <%=h b.description %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_intro_text">
+    <b>Intro Text:</b>
+    <%=h b.intro_text %>
+  </p>
+  </div>
+  <p>
+  <div class="beat_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h b.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_intro_video">
+    <b>Intro Video:</b>
+    <%=h b.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_video">
+    <b>Content Video:</b>
+    <%=h b.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_audio">
+    <b>Content Audio:</b>
+    <%=h b.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_footer">
+    <b>Footer:</b>
+    <%=h b.footer %>
+    </div>
+  </p>
+  
+  <p>
+  <div class="beat_content_text">
+    <b>Content:</b>
+    <%=h b.content_text %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_pdf">
+  
+    <%= link_to '<h3>Printable file (pdf) of this beat</h3>', b.pdf_path %>
+  
+  </div>
+ 
+  </p>
+
+
+
+
+<% end %>
+
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lesson_path(@lesson) %> |

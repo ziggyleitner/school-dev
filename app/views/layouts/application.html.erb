@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title><%= @title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<%= stylesheet_link_tag 'menu'  %>
+<%= stylesheet_link_tag "/stylesheets/css/my_layout.css" %>
+<%= javascript_include_tag 'AC_QuickTime' %>
+<!--[if lte IE 7]>
+<link href="/stylesheets/css/patches/patch_my_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<script type="text/javascript" src="/javascripts/minmax.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="page_margins">
+  <div class="page">
+        <div id="banner"> <%= image_tag("header.jpg", :height => "110", :width => "960" ) %>
+        <div id="blurb"><h1 style="font-size: 30px;  line-height: 1.4; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFCE00;">Welcome to Bob's Drum School</h1>
+                       <h2 style="font-size: 25px; text-decoration: underline; line-height: 1.4; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFCE00;">Drumming is our passion!</h2>
+        </div><!-- blurb -->
+        <div id="topnav">
+	    <a href="/login">Login</a> | <a href="/signup">Sign Up | <a href="/logout">Logout</a>  </a>
+	    	    <p>
+	    	    <% if logged_in? %>
+	    	    Welcome: <%= current_user.name %>!
+	    	    <% end %>
+	    	    </p>
+        </div><!-- topnav -->
+      </div><!-- banner -->
+      <div id="header">
+        <div id="nav"> <a id="navigation" name="navigation"></a>
+          <%= render :partial => "/layouts/proline_orig"  %>
+        </div><!-- nav -->
+      </div><!-- header -->
+<!-- end: main navigation -->
+<!-- begin: main content area #main -->
+		<div id="main">
+<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+				<!--	<h2>This is your browser</h2>
+					<script type="text/javascript">
+					    document.write("<p>Browser's user agent header: ");
+					    document.write(navigator.userAgent + "</p>");
+					</script> -->
+			<%= flash[:notice] %>
+                        <%= flash[:error] %>		
+                    <%= render :partial => "/layouts/menu"  %>
+					</div>
+			</div>
+<!-- end: #col1 -->
+<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+					<!-- skiplink anchor: Content -->
+					<!-- h2>This area is for the main content</h2 -->
+					<%= @content_for_layout %></div>
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+			</div>
+<!-- end: #col3 -->
+		</div>
+<!-- end: #main -->
+<!-- begin: #footer -->
+		<div id="footer">Footer with copyright notice and status information<br />
+                          Layout based on <a href="http://www.yaml.de/">YAML</a></div>
+<!-- end: #footer -->
+	</div>
+</div>
+</body>
+</html>

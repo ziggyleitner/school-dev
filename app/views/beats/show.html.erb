@@ -1,0 +1,95 @@
+<h1>Showing Beat <%= @beat.position %> lesson <%= @beat.lesson_id %> </h1>
+<p>
+  <div class="beat_name">
+    <b>Name:</b>
+    <%=h @beat.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="beat_header">
+    <b>Header:</b>
+    <%=h @beat.header %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_pretty_name">
+    <b>Pretty Name:</b>
+    <%=h @beat.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class = "beat_notation">
+    <b>Beat notation:</b>
+    <%= image_tag(@beat.not_path, :height => @beat.not_img_height,  :width => @beat.not_img_width) %>
+  </div>
+  </p>
+  <p>
+  <div class= "beat_midi">
+    <h2>  Play Midi</h2>
+    <%= render(:partial => "midi", :object => @beat)%>
+  </div>
+  </p>
+  <p>
+  <div class="beat_description">
+    <b>Description:</b>
+    <%=h @beat.description %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_intro_text">
+    <b>Intro Text:</b>
+    <%=h @beat.intro_text %>
+  </div>  
+  </p>
+  <p>
+  <div class="beat_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h @beat.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_intro_video">
+    <b>Intro Video:</b>
+    <%=h @beat.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_video">
+    <b>Content Video:</b>
+    <%=h @beat.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_audio">
+    <b>Content Audio:</b>
+    <%=h @beat.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_footer">
+    <b>Footer:</b>
+    <%=h @beat.footer %>
+    </div>
+  </p>
+  <p>
+      <b>Position:</b>
+      <%=h @beat.position %>
+  </p>
+  <p>
+  <div class="beat_content_text">
+    <b>Content:</b>
+    <%=h @beat.content_text %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_pdf">  
+    
+    <a href=<%=h @beat.pdf_path %>><h3>Show pdf, printable file!</h3></a>
+  </div>  
+  </p>
+  
+  <p><%= link_to 'Show', @beat %> | <%= link_to 'Edit', edit_beat_path(@beat) %> |
+  <%= link_to 'Destroy', @beat, :confirm => 'Are you sure?', :method => :delete %></p>
+
+

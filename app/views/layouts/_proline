@@ -1,0 +1,44 @@
+<div class="pro_linedrop">
+<ul class="select">
+<li><a href="#nogo"><b>Home</b></a></li>
+<li class="line"><a href="#nogo"><b>About Drums</b>
+<!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul class="sub">
+		<li><a href="#nogo">History</a></li>
+		<li><a href="#nogo">Tuning</a></li>
+		<li><a href="#nogo">Sticking</a></li>
+		<li><a href="#nogo">Using Brushes</a></li>
+
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="line"><a href="#nogo"><b>Courses</b>
+<!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul class="sub">
+		<li><a href="#nogo">Rock Basic</a></li>
+		<li><a href="#nogo">Rock Intermediate</a></li>
+		<li><a href="#nogo">Rock Advanced</a></li>
+		<li><a href="#nogo">Jazz Basic</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="lrt"><a href="#nogo"><b>Who we are</b></a></li>
+
+
+
+<li class="lrt"><a href="#nogo"><b>Community</b></a>
+<!--[if IE 7]><!--></a><!--<![endif]-->
+
+
+
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="lrt"><a href="#nogo"><b>Contact us</b></a>
+<!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+</ul>
+</div>

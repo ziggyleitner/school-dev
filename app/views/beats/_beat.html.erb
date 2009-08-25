@@ -1,0 +1,85 @@
+
+<% form_for(@beat) do |f| %>
+  <%= f.error_messages %>
+   <p>
+     <%= f.label :name %><br />
+     <%= f.text_field :name %>
+   </p>
+   <p>
+     <%= f.label :content_text %><br />
+     <%= f.text_area :content_text %>
+   </p>
+   <p>
+     <%= f.label :position %><br />
+     <%= f.text_field :position %>
+   </p>
+   <p>
+     <%= f.label :lesson_id %><br />
+     <%= f.text_field :lesson_id %>
+   </p>
+   <p>
+     <%= f.label :intro_text %><br />
+     <%= f.text_field :intro_text %>
+   </p>
+   <p>
+     <%= f.label :header %><br />
+     <%= f.text_field :header %>
+   </p>
+   <p>
+     <%= f.label :footer %><br />
+     <%= f.text_field :footer %>
+   </p>
+   <p>
+     <%= f.label :intro_audio_path %><br />
+     <%= f.text_field :intro_audio_path %>
+   </p>
+   <p>
+     <%= f.label :intro_video_path %><br />
+     <%= f.text_field :intro_video_path %>
+   </p>
+   <p>
+     <%= f.label :content_video_path %><br />
+     <%= f.text_field :content_video_path %>
+   </p>
+   <p>
+     <%= f.label :content_audio_path %><br />
+     <%= f.text_field :content_audio_path %>
+   </p>
+   <p>
+     <%= f.label :description %><br />
+     <%= f.text_field :description %>
+   </p>
+   <p>
+     <%= f.label :pretty_name %><br />
+     <%= f.text_field :pretty_name %>
+   </p>
+   <p>
+     <%= f.label :not_img_width %><br />
+     <%= f.text_field :not_img_width %>
+   </p>
+   <p>
+     <%= f.label :not_img_height %><br />
+     <%= f.text_field :not_img_height %>
+   </p>
+   <p>
+     <%= f.label :not_path %><br />
+     <%= f.text_field :not_path %>
+   </p>
+   <p>
+     <%= f.label :midi_path %><br />
+     <%= f.text_field :midi_path %>
+  </p>
+  <p>
+     <%= f.label :hints %><br />
+     <%= f.text_area :hints %>
+  </p>
+  <p>
+     <%= f.label :pdf_path %><br />
+     <%= f.text_field :pdf_path %>
+  </p>
+  <p>
+     <%= f.label :time_sign %><br />
+     <%= f.text_field :time_sign %>
+  </p>
+  
+<% end %>

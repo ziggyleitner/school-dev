@@ -1,0 +1,153 @@
+<h1>Listing Course and Terms</h1>
+<p>
+  <b>This is <%=h @course.name %></b>
+</p>
+<p>
+<div class="course_name">
+    <b>Name:</b>
+    <%=h @course.name %>
+ </div>
+  </p>
+  <p>
+  <div class="course_header">
+    <b>Header:</b>
+    <%=h @course.header %>
+    </div>
+  </p>
+  <p>
+  <div class="course_pretty_name">
+    <b>Pretty Name;</b>
+    <%=h @course.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class="course_description">
+    <b>Description:</b>
+    <%=h @course.description %>
+    </div>
+  </p>
+  <p>
+  <div class="course_intro_text">
+    <b>Intro Text:</b>
+    <%=h @course.intro_text %>
+    </div>
+  </p>
+  <p>
+  <div class="course_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h @course.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="course_intro_video">
+    <b>Intro Video:</b>
+    <%=h @course.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="course_video">
+    <b>Content Video:</b>
+    <%=h @course.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="course_audio">
+    <b>Content Audio:</b>
+    <%=h @course.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="course_footer">
+    <b>Footer:</b>
+    <%=h @course.footer %>
+    </div>
+  </p>
+  <p>
+  <div class="course_content_text">
+    <b>Content:</b>
+    <%=h @course.content_text %>
+    </div>
+</p>
+
+<h1>Terms</h1>
+<% @course.terms.each do |t| %>
+  
+<h2>Showing Term <%= t.position %> course <%= t.course_id %> </h2>
+<p>
+  <div class="term_name">
+    <b>Name:</b>
+    <%=h t.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="term_header">
+    <b>Header:</b>
+    <%=h t.header %>
+    </div>
+  </p>
+  <p>
+  <div class="term_pretty_name">
+    <b>Pretty Name:</b>
+    <%=h t.pretty_name %>
+    </div>
+    </p>
+    <p>
+  <div class="term_description">
+    <b>Description:</b>
+    <%=h t.description %>
+    </div>
+  </p>
+  <p>
+  <div class="term_intro_text">
+    <b>Intro Text:</b>
+    <%=h t.intro_text %>
+  </p>
+  </div>
+  <p>
+  <div class="term_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h t.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_intro_video">
+    <b>Intro Video:</b>
+    <%=h t.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_video">
+    <b>Content Video:</b>
+    <%=h t.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_audio">
+    <b>Content Audio:</b>
+    <%=h t.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_footer">
+    <b>Footer:</b>
+    <%=h t.footer %>
+    </div>
+  </p>
+  
+  <p>
+  <div class="term_content_text">
+    <b>Content:</b>
+    <%=h t.content_text %>
+    </div>
+</p>
+
+
+<%= link_to 'Show', term_path(@course) %>
+
+
+<% end %>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', course_path(@course) %> |

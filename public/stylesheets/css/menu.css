@@ -1,0 +1,43 @@
+/* ================================================================
+This copyright notice must be kept untouched in the stylesheet at
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/elegant2.html 
+Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any
+way to fit your requirements.
+
+green   #007E3A
+gold   #FFCE00
+=================================================================== */
+
+#menu, #menu ul {padding:0; margin:0; list-style:none; height:30px; background:#FFCE00;border-bottom:1px solid #000;}
+#menu {padding-left:20px; width:100%;}
+#menu li.first {border-left:1px solid #fff;}
+#menu table {border-collapse:collapse; width:0; height:0; padding:0; margin:-1px;}
+#menu ul {position:absolute; left:-9999px;}
+#menu li {float:left; border-right:1px solid #fff;}
+#menu li a {white-space:nowrap; background:#ddd; display:block; float:left; height:30px; line-height:30px; font-family:georgia, serif; font-size:16px; text-decoration:none; color:#000; padding:0 20px 0 10px;}
+#menu li a.drop {background:#ddd url(../yaml/navigation/images/down.gif) no-repeat right center;}
+#menu li a:hover {position:relative; color:#069; background-color:#ccc;}
+#menu li:hover {position:relative;}
+#menu li:hover > a {color:#080;}
+
+#menu :hover ul {left:-1px; top:30px; width:120px; background:url(trans.gif); padding-top:1px; border-bottom:0;}
+#menu :hover ul li a {border-left:1px solid #fff; height:20px; line-height:20px; width:120px; border-bottom:1px solid #fff; font-size:12px;}
+#menu :hover ul li a.right {background:#ddd url(../yaml/navigation/images/right.gif) no-repeat 135px center;}
+
+#menu :hover ul ul {left:-9999px; padding-top:0;}
+#menu :hover ul li.fly a:hover {padding-left:161px; border-bottom-color:#000; background:#ccc url(../yaml/navigation/images/down.gif) no-repeat right center;}
+#menu :hover ul li.fly:hover > a {padding-left:160px; border-bottom-color:#000; background:#ccc url(../yaml/navigation/images/down.gif) no-repeat right center;}
+#menu :hover ul :hover ul {left:150px; top:21px;}
+#menu :hover ul :hover ul ul {left:-9999px;}
+
+#menu :hover ul :hover ul li a:hover {padding-left:10px; border-color:#fff; background:#ccc;}
+#menu :hover ul :hover ul li.fly a:hover {padding-left:161px; border-bottom-color:#000; background:#ccc url(../yaml/navigation/images/down.gif) no-repeat right center;}
+#menu :hover ul :hover ul li.fly:hover > a {padding-left:160px; border-bottom-color:#000; background:#ccc url(../yaml/navigation/images/down.gif) no-repeat right center;}
+
+#menu :hover ul :hover ul :hover ul {left:150px;}
+#menu :hover ul :hover ul :hover ul li a:hover {padding-left:10px; border-color:#fff; background:#ccc;}
+

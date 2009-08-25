@@ -1,0 +1,16 @@
+
+
+<script language="javascript">
+
+QT_WriteOBJECT('<%=midi.midi_path%>', '0','0', '', 'AUTOPLAY', 'FALSE',
+              'obj#id', '<%=midi.pretty_name%>', 'emb#name', '<%=midi.pretty_name%>', 'enablejavascript', 'true');
+</script>
+
+
+<div class="aerobuttonmenu">
+  <a href="javascript:document.<%= midi.pretty_name %>.Play();" class="aero"><span>Play <%= midi.pretty_name %></span></a>
+  <a href="javascript:document.<%= midi.pretty_name %>.Stop();javascript:document.<%= midi.pretty_name %>.Rewind();" class="aero"><span>Stop <%= midi.pretty_name %></span></a>
+  <a href="javascript:document.<%= midi.pretty_name %>.SetRate(0.75);" class="aero"><span>60 beats/min</span></a>
+  <a href="javascript:document.<%= midi.pretty_name %>.SetRate(1.00);" class="aero"><span>80 beats/min</span></a>
+  <a href="javascript:document.<%= midi.pretty_name %>.SetRate(1.25);" class="aero"><span>100 beats/min</span></a>
+</div>

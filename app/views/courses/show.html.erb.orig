@@ -1,0 +1,72 @@
+<p>
+<div class="course_name">
+  <b>Name:</b>
+  <%=h @course.name %>
+</div>
+</p>
+
+<p>
+<div class="course_header">
+  <b>Header:</b>
+  <%=h @course.header %>
+</div>
+</p>
+<p>
+<div class="course_pretty_name">
+  <b>Pretty Name;</b>
+  <%=h @course.pretty_name %>
+</div>
+  </p>
+<p>
+<div class="course_description">
+  <b>Description:</b>
+  <%=h @course.description %>
+</div>
+</p>
+<p>
+<div class="course_intro_text">
+  <b>Intro Text:</b>
+  <%=h @course.intro_text %>
+</div>
+</p>
+<p>
+<div class="course_intro_audio">
+  <b>Intro Audio:</b>
+  <%=h @course.intro_audio_path %>
+</div>
+</p>
+<p>
+<div class="course_intro_video">
+  <b>Intro Video:</b>
+  <%=h @course.intro_video_path %>
+</div>
+</p>
+<p>
+<div class="course_video">
+  <b>Content Video:</b>
+  <%=h @course.content_video_path %>
+</div>
+</p>
+<p>
+<div class="course_audio">
+  <b>Content Audio:</b>
+  <%=h @course.content_audio_path %>
+</div>
+</p>
+<p>
+<div class="course_footer">
+  <b>Footer:</b>
+  <%=h @course.footer %>
+</div>
+</p>
+
+<p>
+<div class="course_content_text">
+  <b>Content:</b>
+  <%=h @course.content_text %>
+ </div>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

@@ -1,0 +1,111 @@
+<h1>Beats for <%= @lesson.name %></h1>
+
+<% for beat in @beats %>
+  <p>
+  <div class="beat_name">
+    <b>Name:</b>
+    <%=h beat.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="beat_header">
+    <b>Header:</b>
+    <%=h beat.header %>
+    </div>
+  </p>
+  <p>
+  <div class = "beat_notation">
+    <h2>Beat notation</h2>
+    <%= image_tag (beat.image_path, :height => beat.not_img_height,  :width => beat.not_img_width) %>
+  </div>
+  </p>
+  <p>
+  <div class= "beat_midi">
+    <h2>  Play Midi</h2>
+    <%= render(:partial => "midi", :object => beat)%>
+  </div>
+  </p>
+  <p>
+  <div class = "beat_pdf">
+    <h2>Printable file (pdf) of this beat</h2>
+    <%= link_to 'Pdf', beat.pdf_path %>
+  </div>
+  </p>
+  <p>
+  <div class="beat_sign">  
+    <h2>Time sign</h2>        
+    <%=h beat.time_sign %>
+  </div>
+  </p>
+  <p>
+  <div class="beat_pretty_name">
+    <b>Pretty Name;</b>
+    <%=h beat.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class="beat_description">
+    <b>Description:</b>
+    <%=h beat.description %>
+    </div>
+  </p>
+  <p>
+  <div class = "beat_hints">
+    <h2>Hints</h2>   
+    <%=h beat.hints %>
+  </div>
+  </p>
+  <p>
+  <div class="beat_intro_text">
+    <b>Intro Text:</b>
+    <%=h beat.intro_text %>
+  </p>
+  <p>
+  <div class="beat_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h beat.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_intro_video">
+    <b>Intro Video:</b>
+    <%=h beat.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_video">
+    <b>Content Video:</b>
+    <%=h beat.content_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_audio">
+    <b>Content Audio:</b>
+    <%=h beat.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="beat_footer">
+    <b>Footer:</b>
+    <%=h beat.footer %>
+    </div>
+  </p>
+  <p>
+      <b>Position:</b>
+      <%=h beat.position %>
+  </p>
+  <p>
+  <div class="beat_content_text">
+    <b>Content:</b>
+    <%=h beat.content_text %>
+    </div>
+</p>
+  <p><%= link_to 'Show', beat %> | <%= link_to 'Edit', edit_beat_path(beat) %> |
+  <%= link_to 'Destroy', beat, :confirm => 'Are you sure?', :method => :delete %></p>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New beat', new_beat_path(@lesson) %>

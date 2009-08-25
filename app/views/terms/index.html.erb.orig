@@ -1,0 +1,80 @@
+<h1>Listing terms</h1>
+
+<% for term in @terms %>
+  <p>
+  <div class="term_name">
+    <b>Name:</b>
+    <%=h term.name %>
+    </div>
+  </p>
+
+  <p>
+  <div class="term_header">
+    <b>Header:</b>
+    <%=h term.header %>
+    </div>
+  </p>
+  <p>
+  <div class="term_pretty_name">
+    <b>Pretty Name;</b>
+    <%=h term.pretty_name %>
+    </div>
+    </p>
+  <p>
+  <div class="term_description">
+    <b>Description:</b>
+    <%=h term.description %>
+    </div>
+  </p>
+  <p>
+  <div class="term_intro_text">
+    <b>Intro Text:</b>
+    <%=h term.intro_text %>
+  </p>
+  <p>
+  <div class="term_intro_audio">
+    <b>Intro Audio:</b>
+    <%=h term.intro_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_intro_video">
+    <b>Intro Video:</b>
+    <%=h term.intro_video_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_video">
+    <b>Content Video:</b>
+    <%=h term.content_video_path %>
+  </p>
+  <p>
+  <div class="term_audio">
+    <b>Content Audio:</b>
+    <%=h term.content_audio_path %>
+    </div>
+  </p>
+  <p>
+  <div class="term_footer">
+    <b>Footer:</b>
+    <%=h term.footer %>
+    </div>
+  </p>
+  <p>
+      <b>Position:</b>
+      <%=h term.position %>
+  </p>
+  <p>
+  <div class="term_content_text">
+    <b>Content:</b>
+    <%=h term.content_text %>
+    </div>
+</p>
+  <p><%= link_to 'Show', term %> | <%= link_to 'Edit', edit_term_path(term) %> |
+  <%= link_to 'Destroy', term, :confirm => 'Are you sure?', :method => :delete %></p>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New term', new_term_path(@course) %>

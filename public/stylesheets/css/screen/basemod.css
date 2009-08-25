@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2009, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.1
+ * @revision        $Revision: 343 $
+ * @lastmodified    $Date: 2009-01-19 23:41:32 +0100 (Mo, 19. Jan 2009) $
+   gold #FFCE00
+   green #007E3A
+ */
+
+@media screen, projection
+{
+  /**
+   * (en) Formatting YAML's  basic layout elements
+   */
+
+  /* (en) Marginal areas & page background */
+  body { background: #FFCE00 url("../../../images/bg_goldgreen.gif") repeat-x top left fixed; padding: 2px 0; }
+
+  /* (en) Centering layout in old IE-versions */
+  /* (de) Zentrierung des Layouts in alten IE-versionen */
+  body { text-align: center; }
+  .page_margins { text-align:left; margin: 0 auto; }
+
+  /* (en) Layout: width, background, borders */
+  /* (de) Layout: Breite, Hintergrund, Rahmen */
+  .page_margins { min-width: 760px; max-width: 80em; background: #fff; }
+  .page { padding: px; }
+
+  /* (en) Designing main layout elements */
+  /* (de) Gestaltung der Hauptelemente des Layouts */
+
+ #header {
+      position: relative;
+      color: #eee;
+      background: #007E3A repeat-x top left;
+      padding: 2px 2px 1px 0px;
+    }
+
+.course_header {
+  background-color: #F8F8F8;
+  }
+
+.course_name {
+  background-color: #F0F0F0;
+}
+
+.course_pretty_name {
+  background-color: #E8E8E8;
+}
+
+.course_description {
+  background-color: #E0E0E0;
+}
+
+.course_intro_text {
+ background-color: #D8D8D8;
+}
+
+.course_intro_audio {
+background-color: #D0D0D0;
+}
+
+.course_intro_video{
+background-color: #C8C8C8;
+}
+
+.course_video{
+background-color: #C0C0C0;
+}
+
+.course_audio {
+background-color: #B8B8B8;
+}
+
+.course_footer{
+background-color: #B0B0B0;
+}
+
+.course_content_text{
+background-color: #A8A8A8;
+}
+
+.term_header {
+  background-color: #F8F8F8;
+}
+
+.term_name {
+  background-color: #F0F0F0;
+}
+
+.term_pretty_name {
+  background-color: #E8E8E8;
+}
+
+.term_description {
+  background-color: #E0E0E0;
+}
+
+.term_intro_text {
+ background-color: #D8D8D8;
+}
+
+.term_intro_audio {
+background-color: #D0D0D0;
+}
+
+.term_intro_video{
+background-color: #C8C8C8;
+}
+
+.term_video{
+background-color: #C0C0C0;
+}
+
+.term_audio {
+background-color: #B8B8B8;
+}
+
+.term_footer{
+background-color: #B0B0B0;
+}
+
+.term_content_text{
+background-color: #A8A8A8;
+}
+
+.lesson_header {
+  background-color: #F8F8F8;
+  }
+
+.lesson_name {
+  background-color: #F0F0F0;
+}
+
+.lesson_pretty_name {
+  background-color: #E8E8E8;
+}
+
+.lesson_description {
+  background-color: #E0E0E0;
+}
+
+.lesson_intro_text {
+ background-color: #D8D8D8;
+}
+
+.lesson_intro_audio {
+background-color: #D0D0D0;
+}
+
+.lesson_intro_video{
+background-color: #C8C8C8;
+}
+
+.lesson_video{
+background-color: #C0C0C0;
+}
+
+.lesson_audio {
+background-color: #B8B8B8;
+}
+
+.lesson_footer{
+background-color: #B0B0B0;
+}
+
+.lesson_content_text{
+background-color: #A8A8A8;
+}
+.lesson_pdf_One{
+background-color: #FFF;
+}
+.lesson_pdf_Two{
+background-color: #FFF;
+}
+
+.beat_header {
+  background-color: #F8F8F8;
+  }
+
+.beat_pdf {
+  background-color: #F0F0F0;
+  }
+
+.beat_name {
+  background-color: #F0F0F0;
+}
+
+.beat_pretty_name {
+  background-color: #E8E8E8;
+}
+
+.beat_description {
+  background-color: #E0E0E0;
+}
+
+.beat_intro_text {
+ background-color: #D8D8D8;
+}
+
+.beat_intro_audio {
+background-color: #D0D0D0;
+}
+
+.beat_intro_video{
+background-color: #C8C8C8;
+}
+
+.beat_video{
+background-color: #C0C0C0;
+}
+
+.beat_notation {
+  background: #FFF;
+  padding: 10px 2px 10px 0px;
+    
+ }
+ 
+
+.beat_audio {
+background-color: #B8B8B8;
+}
+
+.beat_footer{
+background-color: #B0B0B0;
+}
+
+.beat_content_text{
+background-color: #A8A8A8;
+}
+
+
+ #logo {
+      position: relative;
+      : 10;
+      z-value -10;
+    }
+
+ #banner {
+       position: relative;
+       left: 0px;
+       top: 1px;
+
+  }
+
+  #blurb {
+
+       position: absolute;
+       left: 40px;
+       top: 15px;
+       background: url("../../../images/blurb2.png");
+       padding: 5px 5px 5px 5px;
+
+  }
+
+  #topnav {
+       position: absolute;
+       right: 200px;
+       top: 20px;
+       background-color: #FFCE00;;
+       font-size: 20px;
+       padding: 10px 10px 10px 10px;
+
+  }
+
+  /* (en) adjustment of main navigation */
+  /* (de) Anpassung der Hauptnavigation */
+  #nav ul { margin-left: 2px; }
+
+  #main { background: #FFCE00;padding:20px 10px 10px 10px ; }
+
+  #footer {
+    color:#000;
+    background: #FFCE00;
+    padding: 10px 20px;
+        line-height: 1.5em;
+  }
+
+  /*------------------------------------------------------------------------------------------------------*/
+
+
+    /**
+     * (en) Repositioning content container
+     * (de) Neupositionierung der Content Container
+     *
+     * |-------------------------------|
+     * | #header                       |
+     * |-------------------------------|
+     * | #col1   | #col3               |
+     * | 25%     | flexible            |
+     * |-------------------------------|
+     * | #footer                       |
+     * |-------------------------------|
+     */
+
+    /* Fixed width for left column | Fixe Breite für Linke Spalte */
+    #col1 { width: 25%; padding: 10px 0px 10px 10px; }
+
+    /* Hide right column | Rechte Spalte abschalten */
+    #col2, #col2_content { display:none;
+    padding: 10px 10px 10px 10px;}
+
+    #col3 { margin-left: 25%; margin-right: 0; }
+    #col3_content { padding: 10px 20px 10px 10px; }
+
+
+  /*------------------------------------------------------------------------------------------------------*/
+
+  /**
+   * (en) Styling of layout specific elements
+   * (de) Gestaltung layoutabhängiger Elemente
+   */
+
+  #header h1 {
+    font-weight:bold;
+    font-size:2.5em;
+    letter-spacing:-2px;
+    line-height:65%;
+    color:#000;
+  }
+
+  #header span { color:#999; }
+
+  #topnav a { color: #007E3A; font-font-weight: bold; background:transparent; text-decoration:none; }
+  #topnav a:focus,
+  #topnav a:hover,
+  #topnav a:active { text-decoration:underline; background-color: transparent; }
+
+  #footer a { color: #999; background:transparent; font-weight: bold; }
+  #footer a:focus,
+  #footer a:hover,
+  #footer a:active {color: #4D87C7; background-color: transparent; text-decoration:underline; }
+}
